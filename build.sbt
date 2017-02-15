@@ -1,7 +1,7 @@
 name := "hashids-scala"
 
-organization := "io.john-ky"
+organization := "com.github.dmrolfs"
 
-crossScalaVersions := Seq("2.10.5", "2.11.6")
+crossScalaVersions := Seq("2.12.1")
 
 version in ThisBuild := buildVersion
