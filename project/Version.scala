@@ -23,6 +23,8 @@ trait Version {
   lazy val localChanges: List[String] = {
     val stagedChanges = ("git diff-index --quiet HEAD" !) != 0
     val untrackedChanges = "git ls-files --other --exclude-standard".!! != ""
+    println( s"\n>>> in-SNAPSHOT:[${stagedChanges || untrackedChanges}]") 
+    println( s">>>>> stagedChanges:[${stagedChanges}] untrackedChanges:[${untrackedChanges}]\n" )
     if (stagedChanges || untrackedChanges) {
       username :+ "-SNAPSHOT"
     } else {
