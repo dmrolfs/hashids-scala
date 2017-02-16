@@ -11,6 +11,7 @@ object Build extends Build with Version {
       self
           .settings(organization := "com.github.dmrolfs")
           .settings( scalaVersion := "2.12.1" )
+          .settings( licenses += ("MIT", url("http://opensource.org/licenses/MIT")) )
           .settings(resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases")
           .settings(scalacOptions := Seq("-feature", "-deprecation", "-unchecked", "-Xlint", "-Yrangepos", "-encoding", "utf8"))
           .settings(scalacOptions in Test ++= Seq("-Yrangepos"))
